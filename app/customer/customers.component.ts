@@ -14,15 +14,20 @@ export class CustomersComponent implements OnInit {
     constructor(private _customerService:CustomerService) {
 
      }
-    @Input() customers:Observable<any>;
+    @Input() customers:Promise<any>;
     @Input() customerColor:string;
 
     ngOnInit() { 
         this.customers = this._customerService.getCustomers()
                             .catch((err) => {
                                 console.log(err) //show pretty message to users
-                                return Observable.of((true)); //eats the error
                             });
+        
+        // this.customers = this._customerService.getCustomers()
+        //                     .catch((err) => {
+        //                         console.log(err) //show pretty message to users
+        //                         return Observable.of((true)); //eats the error
+        //                     });
     }
 
 }
