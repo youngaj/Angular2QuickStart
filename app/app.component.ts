@@ -2,6 +2,18 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'my-app',
-    template: '<h1>My First Angular 2 App</h1>'
+    templateUrl: 'app/app.component.html'         
 })
-export class AppComponent { }
+
+export class AppComponent { 
+    title = 'Customer App';
+    name = "Andre";
+    nameColor = 'red';
+
+    changeColor = function(){
+        if(this.nameColor === 'red')
+            this.nameColor = 'blue'
+        else
+            this.nameColor = 'red'
+    };
+}
