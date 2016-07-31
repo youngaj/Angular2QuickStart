@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CustomerComponent } from './customer.component';
 import { CustomerService } from './customer.service';
+import { Observable } from 'rxjs/Rx';
 
 @Component({
     moduleId: module.id,
@@ -13,7 +14,7 @@ export class CustomersComponent implements OnInit {
     constructor(private _customerService:CustomerService) {
 
      }
-    @Input() customers:any;
+    @Input() customers:Observable<any[]>;
     @Input() customerColor:string;
 
     ngOnInit() { 

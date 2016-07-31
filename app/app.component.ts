@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { CustomersComponent } from './customer/customers.component';
+import { HTTP_PROVIDERS } from '@angular/http';
 
 @Component({
     selector: 'my-app',
     templateUrl: 'app/app.component.html',
-    directives:[CustomersComponent]         
+    directives:[CustomersComponent],
+    providers:[HTTP_PROVIDERS]         
 })
 
 export class AppComponent { 

@@ -1,5 +1,5 @@
 Hello from customers component
-<li *ngFor="let c of customers">
+<li *ngFor="let c of customers | async">
     <app-customer 
         [customer]="c"
         [color] = "customerColor">
