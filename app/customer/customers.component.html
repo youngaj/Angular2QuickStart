@@ -1,0 +1,7 @@
+Hello from customers component
+<li *ngFor="let c of customers">
+    <app-customer 
+        [customer]="c"
+        [color] = "customerColor">
+    </app-customer>       
+</li>

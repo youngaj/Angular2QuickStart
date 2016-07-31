@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { CustomerComponent } from './customer/customer.component';
+import { CustomersComponent } from './customer/customers.component';
+
 @Component({
     selector: 'my-app',
     templateUrl: 'app/app.component.html',
-    directives:[CustomerComponent]         
+    directives:[CustomersComponent]         
 })
 
 export class AppComponent { 

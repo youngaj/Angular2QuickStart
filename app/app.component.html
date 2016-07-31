@@ -6,7 +6,8 @@
 
 <br>
 <ul>
-    <li *ngFor="let c of customers">
-        <app-customer [customer]="c"></app-customer>       
-    </li>
+    <app-customers 
+        [customers]="customers" 
+        [customerColor]="nameColor">
+    </app-customers>
 </ul>
