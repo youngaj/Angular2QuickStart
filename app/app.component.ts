@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { CustomersComponent } from './customer/customers.component';
 import { HTTP_PROVIDERS } from '@angular/http';
+
+import { CustomersComponent, CustomerService } from './customer/index';
+
 
 @Component({
     selector: 'my-app',
